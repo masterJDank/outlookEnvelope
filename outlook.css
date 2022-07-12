@@ -1,0 +1,117 @@
+.outer-div{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.internal-env{
+
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    inset:0;
+    margin: auto;
+    /* border: 1px solid black; */
+    
+  
+    z-index: 1000;
+    transform-style: preserve-3d;
+    
+    
+}
+.fold-containers{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    background-color: #102a64;
+}
+.right-fold{
+    position: absolute;
+    background-color: rgb(9, 96, 183);
+    margin: auto;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    transform: rotateZ(-37deg) translateY(80%);
+    background-image: linear-gradient(to  top , rgb(21 139 215), #23aad3);
+    bottom: 50px;
+    /* z-index: 20; */
+    box-shadow: 0px 0px 0px  5px rgba(0, 0, 0, 0.219);
+    z-index: 20;
+}
+.left-fold{
+    position: absolute;
+    background-color: rgb(75, 145, 214);
+    margin: auto;
+    inset: 0;
+    height: 100%;
+    width: 130%;
+    transform: rotateZ(30deg) translateY(80%);
+    bottom: 60px;
+    left: -10%;
+    background-image: linear-gradient(to top , #27a2e3, #27a2e3);
+    box-shadow: 0px 0px 0px  5px rgba(0, 0, 0, 0.219);
+    z-index: 20;
+} 
+.calender{
+    padding-top: 20px;
+    border-radius: 10px 10px 0 0;
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    inset: 0;
+    background-color: #0462b0;
+    display: flex;   
+    flex-wrap: wrap;
+    /* gap: 2px; */
+   
+    animation-name:MasterJD ;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-delay: 300ms;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* animation-timing-function: ease-in-out; */
+}
+
+
+@keyframes MasterJD {
+   from{ transform: translateY(-56%);}
+   to{transform: translateY(-100%);}
+    
+}
+.cal-ele{
+    height: 45px;
+    width: 45px;
+    background-color: rgb(24, 150, 209);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.cal-ele:nth-child(1){
+    background-color:#006cc1 ;
+}
+.cal-ele:nth-child(2){
+    background-color:#27a2e3 ;
+}
+.cal-ele:nth-child(3){
+    background-color:#4dd3f7;
+}
+.cal-ele:nth-child(4){
+    background-color:#0262b2;
+}
+.cal-ele:nth-child(5){
+    background-color:#0174cc ;
+}
+.cal-ele:nth-child(6){
+    background-color:#036abb;
+}
+.cal-ele:nth-child(7){
+    background-color:#095eb2 ;
+}
+.cal-ele:nth-child(8){
+    background-color:#006cc1 ;
+}
+.cal-ele:nth-child(9){
+    background-color:#0368c2 ;
+}
